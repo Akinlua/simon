@@ -1,0 +1,17 @@
+body{
+background-color:#265c70;
+text-align:center;
+
+}
+
+h1{
+background-color:#15323d;
+color:#0d1e24;
+}
+a {
+  color: #3D8EA9;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+}
