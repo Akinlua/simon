@@ -146,6 +146,9 @@ function nextSequence(){
          $('.mybtn').text('Restart');
          startOver();
       }
+       else {
+        starEarned.push('none');
+      }
       var randomNumber= Math.floor(Math.random()*4);      
       randomChosenColor = gameColors[randomNumber];
       gamePattern.push(randomChosenColor);
