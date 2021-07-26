@@ -72,7 +72,7 @@ function startGame(presentKey){
         },100);
 
         playSound('wrong');
-       
+        
         $('.mybtn').show();
         $('.mybtn').text('Restart');
         
@@ -88,7 +88,7 @@ function startGame(presentKey){
         $('.starearned').show();
         var highestStarEarned= starEarned[starEarned.length-1]
         $('.starearned').text('Highest Star Earned: ' + highestStarEarned);
-
+        
         startOver();
         
       }
