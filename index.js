@@ -9,6 +9,8 @@ var started=false;
 
 var level=0;
 
+$('.stop').hide();
+$('.b').hide();
 $('.score').hide();
 $('.box').hide();
 $('.box2').hide();
@@ -24,12 +26,37 @@ $('.mybtn').click(function(){
        nextSequence();
 
        started=true;
-       $('.mybtn').hide();
+       $('.stop').show();
+      $('.mybtn').hide();
+      $('.b').show();
        $('.score').hide();
+   
+
 }
       
-
 });
+
+
+$('.b').click(function(){
+         startOver();
+            if(!started){
+       
+       nextSequence();
+
+       started=true;
+       $('.stop').show();
+      $('.mybtn').hide();
+       $('.score').hide();   
+      }
+ 
+});
+
+
+
+
+
+
+
 
 $(document).keypress(function(){
 
@@ -38,11 +65,21 @@ $(document).keypress(function(){
        nextSequence();
 
        started=true;
-       $('.mybtn').hide(); 
+          $('.stop').show();
+         $('.mybtn').hide();
+      $('.b').show();
        $('.score').hide();
 }
 
 });
+
+$('.stop').click(function(){
+    startOver();
+   $('.mybtn').show();
+   $('#level-title').text('press any key Restart');
+   $('.stop').hide();
+   $('.b').hide();   
+})
 
 $('.btn').click(function(){
 
@@ -73,9 +110,9 @@ function startGame(presentKey){
 
         playSound('wrong');
         
-        $('.mybtn').show();
-        $('.mybtn').text('Restart');
-        
+
+        $('.b').show();
+        $('.stop').hide();
         var lastLevelPlayed=gamePattern.length;
         userScores.push(lastLevelPlayed);
         var highestScore=Math.max(...userScores);
@@ -88,6 +125,9 @@ function startGame(presentKey){
         $('.starearned').show();
         var highestStarEarned= starEarned[starEarned.length-1]
         $('.starearned').text('Highest Star Earned: ' + highestStarEarned);
+        if (userScores[userScores.length-1]===userHighScores[userHighScores.length-1]){
+             $('.score').text('New High Score: level  '+ lastLevelPlayed);
+        }
         
         startOver();
         
@@ -146,9 +186,7 @@ function nextSequence(){
          $('.mybtn').text('Restart');
          startOver();
       }
-       else {
-        starEarned.push('none');
-      }
+      
       var randomNumber= Math.floor(Math.random()*4);      
       randomChosenColor = gameColors[randomNumber];
       gamePattern.push(randomChosenColor);
@@ -179,10 +217,6 @@ function startOver(){
     started=false;
     level=0;
     gamePattern=[];
-}
-
-function storeScores(){
-    
 }
 
 

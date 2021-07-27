@@ -13,20 +13,24 @@ body {
 }
 
 a {
-color:#408c99;
+color:#1f4f61;;
 text-decoration:none;
 font-family:arial;
 line-height:1;
 
 }
 h3{
-color:#408c99;
+color:#1f4f61;;
+}
+
+h2{
+color:#1f4f61;
 }
 
 
-h2{
+.score{
  color:white;
-font-size:50px;
+font-size:3rem;
 }
 
 .sett{
@@ -87,7 +91,7 @@ top: 1rem;
 
 .mybtn {
 	box-shadow: 0px 8px 14px -7px #276873;
-	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #1f4f61 5%, #408c99 100%);
 	background-color:#599bb3;
 	border-radius:11px;
 	display:inline-block;
@@ -100,6 +104,7 @@ top: 1rem;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #3d768a;
         margin-top:0px;
+       
 }
 .mybtn:hover {
 	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
@@ -133,6 +138,59 @@ position:relative;
 left:75rem;
 }
 
-.score{
+.playgame{
+color:#1f4f61;
+}
 
+
+.b {
+	box-shadow: 0px 8px 14px -7px #276873;
+	background:linear-gradient(to bottom, #1f4f61 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:11px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:7px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+        margin-top:0px;
+       
+}
+.b:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.b:active {
+	position:relative;
+	top:1px;
+}
+
+.stop {
+	box-shadow: 0px 8px 14px -7px #276873;
+	background:linear-gradient(to bottom, #1f4f61 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:11px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:7px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+        margin-top:0px;
+       
+}
+.stop:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.stop:active {
+	position:relative;
+	top:1px;
 }
