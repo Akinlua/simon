@@ -6,22 +6,50 @@
    <title> Simon</title>
    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Press+Start+2P'>
 <link rel="stylesheet" href='styles.css'>
- 
+
+
 
 
  </head>
  <body> 
-   <img class='sett' src='setting.png' >
-   <button type="button" class='mybtn'>Start</button> 
+<div id=' openpage' >
+  <div class='dropsett'>
+	<img class='sett  settbtn' src='setting.png' >
+    <div class='dropsett-box'>
+       <a href='' class ='sound'>Sounds</a>
+           <a href='' class='backsound'>Background sound</a> 
+       <a href='' class='music'>Music volume</a>
+     
+    </div>
+     
+  </div>
+        
+ 
+  <div class='dropdown'>
+   
+	
+   
+       <button type='button'  class ='yourscores' >Your High scores</button>
+      
+         
+  
+  </div>
+        
+     
+
+  <div class='container'>
+       
+      <button type="button" class='mybtn'>Start</button> 
       <button type="button" class='b'>Restart</button> 
       <button type="button" class='stop'>stop</button>
-   <img class='threebtn' src='menu.png' >
-<h3 class='highscore'>Highscore: Level 1</h3>
-<h3 class='starearned'>Highest star earned:  ⭐</h3>
+
+
+       <h3 class='highscore'>Highscore: Level 1</h3>
+    <h3 class='starearned'>Highest star earned:  ⭐</h3>
       <h1 id="level-title">Press A key to Start</h1>
          <h2 class='score'>Your Score is Level 1</h2>
-  
-   <div class='container'>
+
+
       <div class='row'>
          <div type="button" id="green"  class="btn green"></div>
          <div type="button" id="red"  class="btn red"></div>
@@ -33,6 +61,19 @@
    </div>
   
   <h2 class='playgame'><a href='last.html'>Clcik on- How to play the simon game</a></h2>
+
+<div>
+
+
+
+<div id='modal'  >
+   <h1>High scores </h1>
+   <p class='txtm'> No high score </p>
+<button type='button' class='btnhs'>close</button>
+
+<div>
+
+
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
 

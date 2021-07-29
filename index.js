@@ -2,6 +2,7 @@ gamePattern=[];
 userPattern=[];
 userScores=[];
 userHighScores=[];
+userNameHighScore=[];
 starEarned=[];
 
 var gameColors=['green', 'blue','red','yellow'];
@@ -9,13 +10,14 @@ var started=false;
 
 var level=0;
 
+$('#modal').hide();
 $('.stop').hide();
 $('.b').hide();
 $('.score').hide();
 $('.box').hide();
 $('.box2').hide();
-$('.sett').hide();
-$('.threebtn').hide();
+
+
 $('.highscore').hide();
 $('.starearned').hide();
 
@@ -54,7 +56,9 @@ $('.b').click(function(){
 
 
 
-
+$('.dropbtn').click(function(){
+     $('.dropdown-box').show();
+});
 
 
 
@@ -115,18 +119,36 @@ function startGame(presentKey){
         $('.stop').hide();
         var lastLevelPlayed=gamePattern.length;
         userScores.push(lastLevelPlayed);
-        var highestScore=Math.max(...userScores);
-        userHighScores.push(highestScore);        
+              
         $('#level-title').text('Game over, press any key Restart');
         $('.score').show();
         $('.score').text('Your Score is level  '+ lastLevelPlayed);
-        $('.highscore').text('High score: Level ' + highestScore);
+        
         $('.highscore').show();
         $('.starearned').show();
         var highestStarEarned= starEarned[starEarned.length-1]
         $('.starearned').text('Highest Star Earned: ' + highestStarEarned);
-        if (userScores[userScores.length-1]===userHighScores[userHighScores.length-1]){
+        var highestScore=Math.max(...userScores);
+           $('.highscore').text('High score: Level ' + highestScore);
+        if (userScores[userScores.length-1]===highestScore){
+
+            userHighScores.push(highestScore); 
+ 
              $('.score').text('New High Score: level  '+ lastLevelPlayed);
+
+              setTimeout(function(){  
+
+            var nameOfHighScorer= prompt('You got a New High score!!!!  what is your name');
+
+            lastHighScore=userHighScores[userHighScores.length-1];
+
+            userNameHighScore.push(nameOfHighScorer+ '- Level '+ lastHighScore);
+
+            var sliced= userNameHighScore.slice(0,userNameHighScore.lenghth);
+
+            $('.txtm').text(sliced);
+
+         },1000);
         }
         
         startOver();
@@ -218,6 +240,20 @@ function startOver(){
     level=0;
     gamePattern=[];
 }
+
+$('.dropdown').click(function(){
+
+   $('#modal').show();
+ 
+
+})
+
+
+$('.btnhs').click(function(){
+  
+ $('#modal').hide();
+
+})
 
 
 

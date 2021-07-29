@@ -11,6 +11,10 @@ body {
  
 
 }
+button{
+
+border:none;
+}
 
 a {
 color:#1f4f61;;
@@ -35,10 +39,7 @@ font-size:3rem;
 
 .sett{
 width:3rem;
-text-align:right;
-position:relative;
-right:33rem;
-top: 1rem;
+
 
 
 
@@ -46,11 +47,11 @@ top: 1rem;
 
 
 .container {
-  display: block;
-  width: 50%;
+ 
+  width: 90%;
   margin: auto;
-
-
+ position:relative;
+ 
 }
 
 .btn {
@@ -127,8 +128,7 @@ text-align:left;
 .threebtn{
    width:5rem;
 position:relative;
-left: 35rem;
-top:1.6rem;
+
 }
 
 .box2{
@@ -194,3 +194,236 @@ color:#1f4f61;
 	position:relative;
 	top:1px;
 }
+
+
+
+
+
+
+
+
+
+
+  
+
+        
+
+
+
+.dropdown{
+   position: relative;
+  display: inline-block;
+ top:30px;
+left: 34rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-score{
+background-color:red;
+
+  position:absolute;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px #9D9B9B
+  z-index: 1;
+position:relative;
+left:160px;
+top:30px;
+}
+
+
+.dropdown-score a{
+    display:block;
+   padding: 0.625rem 1rem;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropsett{
+   position: relative;
+  display: inline-block;
+ top:30px;
+ right: 35rem;
+
+}
+.settbtn{
+    
+     text-align:center;
+     font-size: 1.25rem;
+}
+.dropsett:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+        border-radius:10px;
+       
+
+}
+
+.dropsett-box{
+  display:none;
+  position:absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px black;
+  z-index: 1;
+
+}
+
+.dropsett-box a{
+    display:block;
+   padding: 0.625rem 1rem;
+    
+}
+
+.dropsett:hover  .dropsett-box{display:block;}
+
+.dropsett-box a:hover {background-color:#408c99;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#openpage{
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+}
+
+
+#modal{
+  border: 8px solid #408c99;
+  background-color:white;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  width:50%;
+
+
+}
+.txtm{
+  margin-top: 40px;
+}
+
+
+.btnhs {
+	box-shadow: 0px 8px 14px -7px #276873;
+	background:linear-gradient(to bottom, #1f4f61 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:11px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:7px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+        margin: 30px auto;
+        
+        
+       
+}
+.btnhs:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.btnhs:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+
+
+
+.yourscores {
+
+        background-color:transparent;
+        font-size:30px;
+        color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+        text-shadow: 0px 8px 14px -7px #276873;
+       
+}
+
+
+.yourscores:hover {
+       
+	
+	font-weight:bold;
+	padding:7px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+        margin: 30px auto;
+	text-shadow:0px 1px 0px #3d768a;
+      
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+        border-radius:10px;
+       
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
